@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title .: Lista de ramais - IPF :.
+    = stylesheet_link_tag :all
+    = stylesheet_tag "/stylesheets/custom-theme/style.css", :cache => true
+    - jss = ['jquery.js', 'jquery.dataTables.min.js', 'rails.js', 'application.js']
+    - jss.each do |js|
+      = javascript_include_tag js
+    = csrf_meta_tag
+  %body
+    = yield

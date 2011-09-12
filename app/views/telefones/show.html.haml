@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %b Nome:
+  = @telefone.nome
+%p
+  %b Ramal:
+  = @telefone.ramal
+%p
+  %b Sala:
+  = @telefone.sala
+%p
+  %b Vínculo:
+  = @telefone.vinculo
+= link_to 'Editar', edit_telefone_path(@telefone)
+|
+\#{link_to 'Voltar', telefones_path}
