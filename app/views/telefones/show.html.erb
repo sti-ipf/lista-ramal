@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @telefone.nome %>
+</p>
+
+<p>
+  <b>Ramal:</b>
+  <%= @telefone.ramal %>
+</p>
+
+<p>
+  <b>Sala:</b>
+  <%= @telefone.sala %>
+</p>
+
+<p>
+  <b>Vínculo:</b>
+  <%= @telefone.vinculo %>
+</p>
+
+
+<%= link_to 'Editar', edit_telefone_path(@telefone) %> |
+<%= link_to 'Voltar', telefones_path %>

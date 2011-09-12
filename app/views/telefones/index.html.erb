@@ -1,0 +1,29 @@
+<h1>Lista de Ramais</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Ramal</th>
+    <th>Sala</th>
+    <th>Vínculo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @telefones.each do |telefone| %>
+  <tr>
+    <td><%= telefone.nome %></td>
+    <td><%= telefone.ramal %></td>
+    <td><%= telefone.sala %></td>
+    <td><%= telefone.vinculo %></td>
+    <td><%= link_to 'Mostrar', telefone %></td>
+    <td><%= link_to 'Editar', edit_telefone_path(telefone) %></td>
+    <td><%= link_to 'Apagar', telefone, :confirm => 'Você tem certeza?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo ramal', new_telefone_path %>

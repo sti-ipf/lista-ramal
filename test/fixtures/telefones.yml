@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  ramal: MyString
+  sala: MyString
+  vinculo: MyString
+
+two:
+  nome: MyString
+  ramal: MyString
+  sala: MyString
+  vinculo: MyString
