@@ -1,6 +1,8 @@
 class TelefonesController < ApplicationController
   # GET /telefones
   # GET /telefones.xml
+  skip_before_filter :require_user, :only=>[:index]
+
   def index
     @telefones = Telefone.all
 
