@@ -1,33 +1,4 @@
-%h1 Lista de Ramais
-%table{:class => 'list'}
-  %thead
-    %tr
-      %th Nome
-      %th Ramal
-      %th Sala
-      %th Vínculo
-      - if !current_user.nil?
-        %th
-        %th
-        %th
-  %tbody
-    - @telefones.each do |telefone|
-      %tr
-        %td= telefone.nome
-        %td= telefone.ramal
-        %td= telefone.sala
-        %td= telefone.vinculo
-        - if !current_user.nil?
-          %td= link_to 'Mostrar', telefone
-          %td= link_to 'Editar', edit_telefone_path(telefone)
-          %td= link_to 'Apagar', telefone, :confirm => 'Você tem certeza?', :method => :delete
-%br/
-= link_to 'Novo ramal', new_telefone_path
-
-- if current_user.nil?
-  = render 'javascript_without_actions'
-- else
-  :javascript
+:javascript
     $(document).ready(function(){
       var oTable = $('.list').dataTable({
             "iDisplayLength": 10,
@@ -38,7 +9,6 @@
             "oTableTools": {
                "sSwfPath": "DataTables-1.8.1/media/swf/copy_cvs_xls_pdf.swf"
             },
-            "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 4, 5, 6] }],
             'oLanguage': {
               'oPaginate': {
                 'sFirst': 'primeira',
