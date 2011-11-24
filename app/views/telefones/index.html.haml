@@ -22,11 +22,11 @@
           %td= link_to 'Editar', edit_telefone_path(telefone)
           %td= link_to 'Apagar', telefone, :confirm => 'Você tem certeza?', :method => :delete
 %br/
-= link_to 'Novo ramal', new_telefone_path
 
 - if current_user.nil?
   = render 'javascript_without_actions'
 - else
+  = link_to 'Novo ramal', new_telefone_path
   :javascript
     $(document).ready(function(){
       var oTable = $('.list').dataTable({
