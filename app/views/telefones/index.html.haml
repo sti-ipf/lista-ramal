@@ -20,7 +20,7 @@
         - if !current_user.nil?
           %td= link_to 'Mostrar', telefone
           %td= link_to 'Editar', edit_telefone_path(telefone)
-          %td= link_to 'Apagar', telefone, :confirm => 'Você tem certeza?', :method => :delete
+          %td= button_to 'Apagar', telefone, :confirm => 'Você tem certeza?', :method => :delete
 %br/
 
 - if current_user.nil?
